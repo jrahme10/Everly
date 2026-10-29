@@ -424,3 +424,21 @@ body{background:#fcf8f5;color:#352832;font-family:'Lato',sans-serif;font-size:14
 .favorite-btn{display:grid;place-items:center;cursor:pointer;transition:transform .18s,background .18s,color .18s}
 .favorite-btn:hover{transform:scale(1.08)}
 .favorite-btn.saved{background:#f8e7ec!important;color:#a34f70!important;border-color:#e7c4d1!important}
+
+
+/* Vendor detail modal */
+.vendor-modal-backdrop{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:20px;background:rgba(43,27,40,.56);backdrop-filter:blur(5px);overflow-y:auto}
+.vendor-modal{position:relative;display:grid;grid-template-columns:minmax(220px,.85fr) minmax(300px,1.15fr);width:min(780px,100%);max-height:min(680px,calc(100vh - 40px));overflow:auto;border:1px solid #f0e1e6;border-radius:24px;background:#fffdfc;box-shadow:0 24px 90px #24152245}
+.vendor-modal-close{position:absolute;right:15px;top:15px;z-index:2;display:grid;place-items:center;width:36px;height:36px;border:1px solid #eee2e6;border-radius:50%;background:#fffdfc;color:#493044;font-size:23px;line-height:1}
+.vendor-modal-image{min-height:100%;background-size:cover;background-position:center;position:relative}
+.vendor-modal-content{padding:34px 30px}
+.vendor-modal-content h2{font:400 34px/1.05 'Cormorant Garamond',serif;color:#493044;margin:12px 35px 10px 0}
+.vendor-modal-meta{display:flex;align-items:center;gap:12px;color:#8d6178;font-size:11px;font-weight:700}
+.vendor-modal-location{font-size:11px;color:#887984;margin:18px 0 10px}
+.vendor-modal-description{font-size:13px;line-height:1.8;color:#6f5c6b}
+.vendor-modal-price{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 15px;padding:15px 0;border-top:1px solid #f0e5e8;border-bottom:1px solid #f0e5e8}
+.vendor-modal-price span{font-size:11px;color:#887984}
+.vendor-modal-price strong{font:400 25px 'Cormorant Garamond',serif;color:#493044}
+.vendor-modal-notice{padding:12px 13px;border-radius:12px;background:#f8eff1;color:#8a7483;font-size:10px;line-height:1.7}
+.vendor-modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+@media(max-width:620px){.vendor-modal-backdrop{padding:12px;align-items:center}.vendor-modal{display:block;max-height:calc(100dvh - 24px);border-radius:19px}.vendor-modal-image{height:165px;min-height:0;background-position:center 45%}.vendor-modal-content{padding:23px 19px}.vendor-modal-content h2{font-size:29px}.vendor-modal-price{margin:16px 0 12px}.vendor-modal-actions{display:grid;grid-template-columns:1fr 1fr}.vendor-modal-actions .btn{padding:12px 10px;font-size:10px}}
