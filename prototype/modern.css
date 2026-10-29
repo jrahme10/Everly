@@ -442,3 +442,11 @@ body{background:#fcf8f5;color:#352832;font-family:'Lato',sans-serif;font-size:14
 .vendor-modal-notice{padding:12px 13px;border-radius:12px;background:#f8eff1;color:#8a7483;font-size:10px;line-height:1.7}
 .vendor-modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 @media(max-width:620px){.vendor-modal-backdrop{padding:12px;align-items:center}.vendor-modal{display:block;max-height:calc(100dvh - 24px);border-radius:19px}.vendor-modal-image{height:165px;min-height:0;background-position:center 45%}.vendor-modal-content{padding:23px 19px}.vendor-modal-content h2{font-size:29px}.vendor-modal-price{margin:16px 0 12px}.vendor-modal-actions{display:grid;grid-template-columns:1fr 1fr}.vendor-modal-actions .btn{padding:12px 10px;font-size:10px}}
+
+
+/* Keep wedding-date editing available on small screens */
+@media(max-width:640px){
+ .date-pill{display:inline-flex;align-items:center;gap:4px;padding:7px 9px;font-size:9px;white-space:nowrap}
+ .date-pill #weddingDateLabel{max-width:108px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .top-actions{gap:8px}
+}
