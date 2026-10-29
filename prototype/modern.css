@@ -457,3 +457,11 @@ body{background:#fcf8f5;color:#352832;font-family:'Lato',sans-serif;font-size:14
 .task-remove{display:grid;place-items:center;width:28px;height:28px;border:1px solid #eee4e8;border-radius:8px;background:#fff;color:#987d8c;font-size:18px;line-height:1;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
 .task-remove:hover{background:#f8e7ec;color:#9c3e60;border-color:#e7c4d1}
 @media(max-width:640px){.task{gap:9px}.task-actions{gap:5px}.task-remove{width:26px;height:26px}.task-tag{padding:5px 6px}}
+
+
+/* Guest list search and RSVP filters */
+.guest-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,.45fr);gap:14px;margin:0 0 17px}
+.guest-tools .field{min-width:0}
+.guest-tools .field label{display:block;margin-bottom:7px}
+.guest-tools .field input,.guest-tools .field select{width:100%;min-height:42px}
+@media(max-width:560px){.guest-tools{grid-template-columns:1fr;gap:10px}.guest-tools .field input,.guest-tools .field select{min-height:40px}}
