@@ -418,3 +418,9 @@ body{background:#fcf8f5;color:#352832;font-family:'Lato',sans-serif;font-size:14
  .filter-row{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
  .filter{white-space:nowrap}
 }
+
+
+/* Persisted vendor shortlist states */
+.favorite-btn{display:grid;place-items:center;cursor:pointer;transition:transform .18s,background .18s,color .18s}
+.favorite-btn:hover{transform:scale(1.08)}
+.favorite-btn.saved{background:#f8e7ec!important;color:#a34f70!important;border-color:#e7c4d1!important}
