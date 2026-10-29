@@ -70,7 +70,7 @@ function guestsPage(){let guests=state.guests||[];return '<div class="heading-ro
 function render(){let pages={dashboard:dashboard,budget:budgetPage,checklist:checklistPage,vendors:vendorsPage,guests:guestsPage};document.getElementById('content').innerHTML=pages[currentPage]();document.getElementById('crumb').textContent=({dashboard:'Overview',budget:'Budget planner',checklist:'Wedding checklist',vendors:'Find vendors',guests:'Guest list'})[currentPage];document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===currentPage));document.getElementById('sidebar').classList.remove('open')}
 document.addEventListener('click',e=>{
 const nav=e.target.closest('[data-page]');if(nav){currentPage=nav.dataset.page;render();return}
-const go=e.target.closest('[data-go]');if(go){currentPage=go.dataset.go;render();return}
+const go=e.target.closest('[data-go]');if(go){if(go.dataset.go==='vendors'&&go.dataset.filter)vendorFilter=go.dataset.filter;currentPage=go.dataset.go;render();return}
 const filter=e.target.closest('[data-filter]');if(filter){vendorFilter=filter.dataset.filter;render();return}
 const contact=e.target.closest('.vendor-contact');if(contact){let v=state.vendors.find(x=>x.name===contact.dataset.name);alert(v.name+'\n'+v.type+' · '+v.location+'\nIndicative price: '+money(v.price)+'\n\n'+v.desc+'\n\nThis is a demo profile. Vendor contact and booking will be added in a future version.');return}
 if(e.target.id==='menuBtn'){document.getElementById('sidebar').classList.toggle('open');return}
