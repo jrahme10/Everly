@@ -546,3 +546,6 @@ body{background:#fcf8f5;color:#352832;font-family:'Lato',sans-serif;font-size:14
 .account-signout{color:#a43c38}
 body.account-open{overflow:hidden}
 @media(max-width:520px){.account-dialog{padding:26px 21px}.account-dialog h2{font-size:27px}.account-button{padding:8px 11px;font-size:11px}.top-actions{gap:7px}}
+
+/* Respect the HTML hidden attribute even on styled controls. */
+[hidden]{display:none!important}
